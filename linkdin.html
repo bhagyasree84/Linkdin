@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Linkedin</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: whitesmoke;
+        } 
+        nav{
+    width:100%;
+            height:70px;
+            position: fixed;
+            left:0;
+            top:0;
+            z-index:2;
+            background-color: white;
+}
+.input-group{
+    width: 300px;
+}
+.right i{
+    font-size: 16px;
+}
+.section-1{
+    width: 100vw;
+    margin-top: 100px;
+    /* height: 100vh; */
+    padding: 20px;
+    z-index:0;
+}
+.cont1{
+    width: 100vw;
+    height: 100vh;
+}
+.leftone{
+width: 19vw;
+/* min-height: 100vh; */
+margin-left: 150px;
+margin-right: 30px;
+}.middleone{
+width: 45%;
+/* margin-left: 30px; */
+/* margin-right: 30px; */
+
+
+}
+.rightone{
+    width: 21vw;
+    margin-right: 150px;
+min-height: 300vh;
+margin-left: 30px;
+}
+.left1{
+
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 8px ;
+    margin: 20px 0;
+    border: 1px solid gray;
+
+}
+.left2{
+
+width: 100%;
+height: fit-content;
+background-color: white;
+border-radius: 8px ;
+margin: 20px 0;
+border: 1px solid gray;
+padding: 10px;
+
+}
+.left3{
+
+width: 100%;
+height: fit-content;
+background-color: white;
+border-radius: 8px ;
+margin: 20px 0;
+border: 1px solid gray;
+padding: 10px;
+}
+.middle1{
+    width: 100%;
+ height: fit-content;
+background-color: white;
+border-radius: 8px ;
+margin: 20px 0;
+border: 1px solid gray;
+height: fit-content;
+
+}
+.middle2{
+    width: 100%;
+height: fit-content;
+background-color: white;
+border-radius: 8px ;
+margin: 20px 0;
+border: 1px solid gray;
+
+}
+.middle3{
+    width: 100%;
+ height: fit-content;
+background-color: white;
+border-radius: 8px ;
+margin: 20px 0;
+border: 1px solid gray;
+
+}
+.right1{
+    width: 100%;
+height: fit-content;
+margin: 20px 0;
+background-color: white;
+border-radius: 8px ;
+border: 1px solid gray;    
+}
+.right2{
+    width: 100%;
+height: fit-content;
+    background-color: white;
+    border-radius: 8px ;
+    margin: 20px 0;
+    border: 1px solid gray;
+    position: sticky;
+    top: 100px;
+}
+.name{
+    font-size: 20px;
+    font-weight:600 ;
+    margin-left: 15px; 
+    position: relative;
+    bottom: 30px;
+}
+.abt{
+    margin-left: 15px;
+    position: relative;
+    bottom: 28px;
+    font-size: 12px;
+}
+.snist{
+    /* position: relative; */
+    width: 30px;
+    margin-left: 10px;
+    
+}
+.back{
+    width: 100%;
+}
+.profile{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 35px;
+    left: 20px;
+    border: 3px solid white;
+}
+.btn{
+    width:80%;
+            height:50px;
+            border: none;
+            border: 1px solid gray;
+            border-radius:25px;
+            text-align:left;
+            padding-left:10px;
+}
+.r1{
+    margin: 8px;
+}
+.btn2{
+    width:55%;
+            height:40px;
+            border: none;
+            background: transparent;
+            border: 1px solid blue;
+            border-radius:25px;
+            padding-left:10px;
+} 
+@media(max-width:1100px){
+    .rightone{
+        display:none;
+    }
+    .leftone{
+        width:50vw;
+margin-left: 0px;
+margin-right: 30px;
+    }
+    .middleone{
+
+        width: 90%;
+    }
+    .input-group{
+    width: 200px;
+    height: 55px;
+    display: none;
+}
+.right i{
+    font-size: 15px;
+}
+}
+@media(max-width:700px){
+    .section-1{
+        flex-direction: column;
+    }
+    .left1{
+          width: 90vw ;
+          height: fit-content;
+          margin-bottom: 20px;
+          padding: 0;
+          margin-left: 0px;
+        }
+    .middleone{
+
+        width: 90vw;
+        margin-right: 0px;
+    margin-left: 2px;
+        
+    }
+    .middle1,.middle2,.middle3{
+        height: fit-content;
+
+    }
+    .navbar-nav .nav-link {
+                font-size: 10px;
+                display: none;
+    }
+    
+    .right i {
+        font-size: 14px;
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    .rightone{
+        display:none;
+    }
+    .left2, .left3{
+       display: none;
+    }
+}
+    </style>
+</head>
+<body>
+<!-- navbar -->
+
+    <nav class="d-flex justify-content-around align-items-center">
+        <div class="left d-flex justify-content-center align-items-center">
+            <img src="L0.png.jpg" width="50px" class="mb-3 mx-2" alt="">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="form-control" placeholder="Search " aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+        </div>
+
+        <div class="right d-flex justify-content-center align-items-center gap-4">
+            <div class="d-flex flex-column justify-content-center align-items-center border-bottom border-dark border-2 px-2 ">
+                <i class="fa-solid fa-house"></i><p>Home</p>
+            </div>
+           <div  class="d-flex flex-column justify-content-center align-items-center px-2"> 
+            <i class="fa-solid fa-user-group"></i><p>Networks</p>
+        </div>
+            <div  class="d-flex flex-column justify-content-center align-items-center px-2">
+                <i class="fa-solid fa-briefcase"></i><p>Jobs</p>
+            </div>
+            
+            <div  class="d-flex flex-column justify-content-center align-items-center px-2">
+                <i class="fa-solid fa-message"></i><p>Messaging</p>
+            </div>
+            <div  class="d-flex flex-column justify-content-center align-items-center border-end border-gray border-2 px-2">
+                <i class="fa-solid fa-bell"></i><p>Notifications</p>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-solid fa-grip-vertical"></i><p>Businness</p>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-solid fa-square-check"></i><p class="icm">Try Premium</p>
+              </div>
+        </div>
+    </nav>
+    
+<!-- section1 -->
+<div class="cont1 section-1 d-flex ">
+    <div class="leftone">
+        <div class="left1">
+            <img src="b1.png" class="back" alt="">
+            <img src="bmr.png" class="profile" alt="">
+            <h1 class="name">Panuganti Bhagyasree<i class="fa-regular fa-circle-check"></i></h1>
+            <h2 class="abt">(She/Her)<br>|Student at Sreenidhi Institute Of Science and Technology| </h2>
+            <h3 class="abt">Hyderabad, Telangana</h3>
+            <div class="d-flex">
+                <img src="sreenidhi.png" class="snist" alt="">
+            <b class="fs-9">Sreenidhi Institute Of Science And Technology</b>
+            </div>
+            
+        </div>
+        <div class="left2">
+            <div class="d-flex justify-content-evenly align-items-start gap-4 mx-2 py-2">
+            <div class="d-flex flex-column align-items-start">
+                <b>
+                <p>Profile Viewers</p>
+                <p>Post Impressions</p>
+            </b>
+        </div>
+            <div class="text-primary d-flex flex-column align-items-end">
+                <p>765</p>
+                <p>79</p>
+            </div>
+            </div>
+
+        </div>
+        <div class="left3">
+            <div class="lsub3 w-100 bg rounded d-flex justify-content-center align-items-start px-4 gap-2 flex-column">
+                <div class="d-flex gap-3 justify-content-center align-items-center"><i class="fa-solid fa-bookmark"></i><strong>Saved</strong></div>
+                <div class="d-flex gap-2 justify-content-center align-items-center"><i class="fa-solid fa-people-group"></i><strong>Groups</strong></div>
+                <div class="d-flex gap-3 justify-content-center align-items-center"><i class="fa-solid fa-newspaper"></i><strong>NewsLetters</strong></div>
+                <div class="d-flex gap-3 justify-content-center align-items-center"><i class="fa-solid fa-calendar-week"></i><strong>Events</strong></div>
+                
+            </div>
+
+        </div>
+    </div>
+    <div class="middleone">
+        <div class="middle1">
+            <div class="d-flex flex-column gap-2">
+                <div class="mtop w-100 rounded bg p-3">
+                    <div class="d-flex justify-content-evenly align-items-center">
+                        <img src="bmr.png" class=" rounded-circle" height="50px" width="50px" alt="">
+                        <button class="btn">Start a post</button>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center py-4 mid-icons">
+                        <div class="d-flex justify-content-center align-items-center gap-2">
+                            <p><i class="fa-regular fa-image text-primary"></i></p>
+                            <p>Media</p>
+                        </div>
+                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                <p><i class="fa-regular fa-calendar text-danger"></i></p>
+                                <p>Events</p>
+                        </div>
+                        <div class="d-flex  justify-content-center align-items-center gap-2">
+                           <p> <i class="fa-solid fa-newspaper text-danger"></i></p>
+                            <p>Write article</p>
+                        </div>
+                    </div>   
+
+                    </div>
+                </div>
+        </div>
+        <hr>
+        <div class="middle2 p1 mt-3">
+            <div class=" d-flex p-2 justify-content-between">
+                <div class="gap-2 m-2 d-flex">
+                    <img class="rounded-circle " width="50px" height="50px" src="microsoft.png" alt="">
+                
+                <div class="d-flex flex-column mb-0 p">
+                    <div class="d-flex ">
+                        <h5>Microsoft</h5>
+                        <p class="fs-11px mb-0"></p>
+                    </div>
+                    <p class="fs-11px mb-0">24,910,987 followers </p>
+                    <p class="fs-11px mb-0">2h. 6d. Edited <i class="fa-solid fa-earth-americas"></i></p>
+                </div>
+            </div>
+               <div>
+                <i class="fa-solid fa-ellipsis fs-5 px-2"></i>
+                <i class="fa-solid fa-xmark fs-5 px-1 "></i>
+               </div>
+            </div>
+            <div class=" fd-16 px-3"> #AI is no longer just a promise - it's delivering real impact!
+      Join us for sessions with Microsoft leaders Satya Nadella, Mustafa Suleyman, and Puneet Chandok as they share groundbreaking insights on Ai transformation from potential to real-world value.  
+                
+                Seats are limited - register now!
+                
+            </div>
+            <img class="" width="100%" src="m1.png" alt="">
+            <div class=" d-flex justify-content-center">
+                <p>register now</p>
+            </div>
+            <div class="d-flex justify-content-between px-3">
+                <p><i class="fa-regular fa-thumbs-up in1"></i>260</p>
+                <p>8 comment . 24 Reposts</p>
+            </div>
+            <div class="m2 d-flex justify-content-evenly ">
+                <p class="m31"> <i class="fa-regular fa-thumbs-up px-1 py-2"></i>Like</p>
+                <p class="m31"> <i class="fa-regular fa-comment-dots p-1 py-2"></i>Comment</p>
+                <p class="m31"> <i class="fa-solid fa-repeat p-1 py-2"></i>Repost</p>
+                <p class="m31"> <i class="fa-solid fa-paper-plane p-1 py-2"></i>send</p>
+            </div>
+          </div>
+
+
+<div class="middle3 p2 mt-3">
+    <div class=" d-flex p-2 justify-content-between">
+        <div class="gap-2 m-2 d-flex">
+            <img class="rounded-circle " width="50px" height="50px" src="g1.png" alt="">
+        
+        <div class="d-flex flex-column mb-0 p">
+            <div class="d-flex ">
+                <h5>Google For Developers.</h5>
+               
+            </div>
+            <p class="fs-11px mb-0"> 2,107,353 Followers</p>
+            <p class="fs-11px mb-0">2m.<i class="fa-solid fa-earth-americas"></i></p>
+        </div>
+    </div>
+       <div>
+        <p class="text-primary">+Follow</p>
+       </div>
+    </div>
+    <div class=" fd-16 px-3">Over 140,000 developers upskilled in generative AI through the Google & Kaggle GenAI Intensive.
+    </div>
+    <img class="" width="100%" src="g3.png" alt="">
+    <div class="d-flex justify-content-between px-3">
+        <p><i class="fa-regular fa-thumbs-up in1"></i>770</p>
+        <p>62 comments . 65 Reposts</p>
+    </div>
+    <div class="m2 d-flex justify-content-evenly ">
+        <p class="m31"> <i class="fa-regular fa-thumbs-up px-1 py-2"></i>Like</p>
+        <p class="m31"> <i class="fa-regular fa-comment-dots p-1 py-2"></i>Comment</p>
+        <p class="m31"> <i class="fa-solid fa-repeat p-1 py-2"></i>Repost</p>
+        <p class="m31"> <i class="fa-solid fa-paper-plane p-1 py-2"></i>send</p>
+    </div>
+          </div>
+
+<div class="middle2 p3 mt-3">
+    <div class=" d-flex p-2 justify-content-between">
+        <div class="gap-2 m-2 d-flex">
+            <img class="rounded-circle " width="50px" height="50px" src="Deloitte.png" alt="">
+        
+        <div class="d-flex flex-column mb-0 p">
+            <div class="d-flex ">
+                <h5>Deloitte</h5>
+                <p class="fs-11px mb-0">.2nd</p>
+            </div>
+            <p class="fs-11px mb-0">18,045,305 followers</p>
+            <p class="fs-11px mb-0">28m .<i class="fa-solid fa-earth-americas"></i></p>
+        </div>
+    </div>
+       <div>
+        <p class="text-primary">Join</p>
+       </div>
+    </div>
+    <div class=" fd-16 px-3">We are delighted to announce our role as the exclusive sell-side M&A adviser to the founding promoter groups of Megafine Pharma (P) Ltd. 
+    </div>
+    <img class="" width="100%" src="deloitte1.png" alt="">
+    <div class="d-flex justify-content-between px-3">
+        <p><i class="fa-regular fa-thumbs-up in1"></i>28</p>
+        <p>1 comment . 0 Reposts</p>
+    </div>
+    <div class="m2 d-flex justify-content-evenly ">
+        <p class="m31"> <i class="fa-regular fa-thumbs-up px-1 py-2"></i>Like</p>
+        <p class="m31"> <i class="fa-regular fa-comment-dots p-1 py-2"></i>Comment</p>
+        <p class="m31"> <i class="fa-solid fa-repeat p-1 py-2"></i>Repost</p>
+        <p class="m31"> <i class="fa-solid fa-paper-plane p-1 py-2"></i>send</p>
+    </div>
+          </div>
+        
+    </div>
+    <div class="rightone">
+        <div class="right1">
+            <div class="rounded bg py-4">
+                <h4 class="px-2">Trending Now</h4>
+                    <h7 class="text-secondary px-3">curated by LinkedIn News</h7>
+                    <div class="r1">
+                        <h6>Quick commerce to hit a speed bump</h6>
+                        <p class="text-secondary" style="font-size:13px;">9h ago . 2,094 readers</p>
+                    </div>
+                    <div class="r1">
+                        <h6>Housing prices skyrocket</h6>
+                        <p class="text-secondary" style="font-size:13px;">9h ago . 1,371 readers</p>
+                    </div>
+                    <div class="r1">
+                        <h6>IT growth stalls</h6>
+                        <p class="text-secondary" style="font-size:13px;">9h ago . 1,212 readers</p>
+                    </div>
+                    <div class="r1">
+                        <h6>Telecpm players to ring up revenue</h6>
+                        <p class="text-secondary" style="font-size:13px;">9h ago . 635 readers</p>
+                    </div>
+                    <h6 class="px-3">Show more</h6>
+                    <h6 class="text-secondary px-3">Today's puzzles</h6>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="puzzle d-flex justify-content-between align-items-center  p-1 r1">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="tango.png" height="35px" alt="">
+                                <div class="d-flex flex-column">
+                                    <div>
+                                        Tango
+                                    </div>
+                                    <div>
+                                       Harmonize the grid
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="puzzle d-flex justify-content-between align-items-center  p-1 r1">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="queens.png" height="35px" alt="">
+                                <div class="d-flex flex-column">
+                                    <div>
+                                        Queens
+                                    </div>
+                                    <div>
+                                        Crown each region
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="puzzle d-flex justify-content-between align-items-center p-1  r1">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="pinpoint.png" height="32px" alt="">
+                                <div class="d-flex flex-column">
+                                    <div>
+                                        Pinpoint
+                                    </div>
+                                    <div>
+                                        Guess the category
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="puzzle d-flex justify-content-between align-items-center p-1 r1">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="crossclimb.png" height="35px" alt="">
+                                <div class="d-flex flex-column">
+                                    <div>
+                                        Crossclimb
+                                    </div>
+                                    <div>
+                                        Unlock a trivia ladder
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    
+                            </div>
+ 
+        
+                        </div>
+                    </div>
+    <div class="right2">
+        <div class=" d-flex text-secondary align-items-end justify-content-end">
+            <p>Ad <i class="fa-solid fa-ellipsis texr-dark"></i></p>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center px-3">
+            <p >LinkedIn Learning is an learning platform that offers courses to help users develop business and technology skills. </p>
+            
+            <img src="l3.png" width="70px" alt="">
+            
+            <button class="text-primary btn2">Contact  </button>
+        </div>
+       
+    </div>
+            
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
